@@ -1,6 +1,7 @@
 import React, { useEffect } from "react";
 import { Html5QrcodeScanner } from "html5-qrcode";
 import api from "@/api/axios";
+import { toast } from "sonner";
 
 const CheckInPage = () => {
   useEffect(() => {
@@ -18,9 +19,9 @@ const CheckInPage = () => {
             attendee_id: qrData.attendee_id,
           });
 
-          alert(response.data.message);
+          toast.success(response.data.message);
         } catch (error) {
-          alert("Invalid QR code or check-in failed");
+          toast.error("Invalid QR code or check-in failed");
         }
       },
       (error) => {
