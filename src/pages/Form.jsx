@@ -68,10 +68,14 @@ const Form = () => {
         attendance_type: "normal",
       });
     } catch (error) {
-      console.error(error);
-      toast.error("Registration failed. Please try again.");
-    } finally {
-      setLoading(false);
+      console.error("FULL ERROR:", error);
+      console.error("BACKEND ERROR:", error.response?.data);
+
+      toast.error(
+        error.response?.data?.message ||
+          error.response?.data?.error ||
+          "Registration failed. Please try again.",
+      );
     }
   };
 
