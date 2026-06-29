@@ -335,7 +335,7 @@ const Form = () => {
             >
               Cancel
             </Button>
-
+            <br />
             <Button type="submit" disabled={loading}>
               {loading
                 ? "Processing..."
@@ -343,6 +343,7 @@ const Form = () => {
                   ? "Make Payment"
                   : "Submit Registration"}
             </Button>
+
             <Field>
               <FieldDescription>
                 GhIE-UMaT SRID All rights & reserved 2026
