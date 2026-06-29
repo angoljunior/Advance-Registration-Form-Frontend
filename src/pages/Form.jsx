@@ -131,7 +131,7 @@ const Form = () => {
         />
 
         <h1 className="text-2xl font-bold">
-          GhIE Engineering Summit Registration Form
+          GhIE-UMaT SRID Engineering Summit Registration Form
         </h1>
 
         <p className="mt-2 text-sm text-muted-foreground">Caption here</p>
@@ -253,6 +253,8 @@ const Form = () => {
                     Mechanical Engineering
                   </SelectItem>
                   <SelectItem value="civil">Civil Engineering</SelectItem>
+                  <SelectItem value="civil">Data Science & </SelectItem>
+                  <SelectItem value="civil">Civil Engineering</SelectItem>
                   <SelectItem value="computer">Computer Engineering</SelectItem>
                   <SelectItem value="mining">Mining Engineering</SelectItem>
                   <SelectItem value="chemical">Chemical Engineering</SelectItem>
@@ -341,6 +343,11 @@ const Form = () => {
                   ? "Make Payment"
                   : "Submit Registration"}
             </Button>
+            <Field>
+              <FieldDescription>
+                GhIE-UMaT SRID All rights & reserved 2026
+              </FieldDescription>
+            </Field>
           </Field>
         </FieldGroup>
       </form>
