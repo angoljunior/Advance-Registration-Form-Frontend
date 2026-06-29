@@ -300,13 +300,13 @@ const Form = () => {
               <SelectContent>
                 <SelectGroup>
                   <SelectItem value="normal">Normal</SelectItem>
-                  <SelectItem value="vvip">VVIP - GHS 2.0</SelectItem>
+                  <SelectItem value="vvip">VVIP - GHS 100.0</SelectItem>
                 </SelectGroup>
               </SelectContent>
             </Select>
             <FieldDescription>
-              VVIP registration requires payment of GHS 150. <br />
-              VVIP comes with these packages <br />
+              VVIP registration requires payment of GHS 100.00 <br />
+              Comes with these packages <br />
               -Summit Branded T-Shirt <br />
               -Certificate of Participation <br />
               -Access to Event
