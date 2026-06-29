@@ -90,7 +90,7 @@ const Form = () => {
     paystack.newTransaction({
       key: PAYSTACK_PUBLIC_KEY,
       email: formData.email,
-      amount: 2 * 100,
+      amount: 100 * 100, //make it 100 cedis
       currency: "GHS",
 
       metadata: {
@@ -280,7 +280,7 @@ const Form = () => {
                 <SelectGroup>
                   <SelectItem value="member">GhIE Member</SelectItem>
                   <SelectItem value="non_member">Non-Member</SelectItem>
-                  <SelectItem value="student_member">Student Member</SelectItem>
+                  <SelectItem value="student_member">Graduate</SelectItem>
                 </SelectGroup>
               </SelectContent>
             </Select>
@@ -305,7 +305,11 @@ const Form = () => {
               </SelectContent>
             </Select>
             <FieldDescription>
-              VVIP registration requires payment of GHS 150.
+              VVIP registration requires payment of GHS 150. <br />
+              VVIP comes with these packages <br />
+              -Summit Branded T-Shirt <br />
+              -Certificate of Participation <br />
+              -Access to Event
             </FieldDescription>
           </Field>
 
