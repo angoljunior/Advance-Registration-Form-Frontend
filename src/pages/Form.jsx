@@ -164,7 +164,6 @@ const Form = () => {
               />
             </Field>
           </div>
-
           <Field>
             <FieldLabel>Gender</FieldLabel>
             <Select
@@ -186,7 +185,6 @@ const Form = () => {
             </Select>
             <FieldDescription>This field is optional.</FieldDescription>
           </Field>
-
           <div className="grid grid-cols-1 gap-4 md:grid-cols-2">
             <Field>
               <FieldLabel htmlFor="email">Email Address</FieldLabel>
@@ -214,7 +212,6 @@ const Form = () => {
               />
             </Field>
           </div>
-
           <Field>
             <FieldLabel htmlFor="institution">Institution</FieldLabel>
             <Input
@@ -227,7 +224,6 @@ const Form = () => {
               required
             />
           </Field>
-
           <Field>
             <FieldLabel>Engineering Discipline</FieldLabel>
             <Select
@@ -261,7 +257,6 @@ const Form = () => {
               </SelectContent>
             </Select>
           </Field>
-
           <Field>
             <FieldLabel>GhIE Membership Status</FieldLabel>
             <Select
@@ -285,7 +280,6 @@ const Form = () => {
               </SelectContent>
             </Select>
           </Field>
-
           <Field>
             <FieldLabel>Attendance Type</FieldLabel>
             <Select
@@ -312,7 +306,6 @@ const Form = () => {
               -Access to Event
             </FieldDescription>
           </Field>
-
           <Field orientation="horizontal">
             <Button
               type="button"
@@ -342,7 +335,8 @@ const Form = () => {
                   : "Submit Registration"}
             </Button>
           </Field>
-          <Field>
+
+          <Field className="mt-4 text-center text-sm text-muted-foreground ">
             <FieldDescription>
               GhIE-UMaT SRID All rights & reserved 2026
             </FieldDescription>
