@@ -133,8 +133,6 @@ const Form = () => {
         <h1 className="text-2xl font-bold">
           GhIE-UMaT SRID Engineering Summit Registration Form
         </h1>
-
-        <p className="mt-2 text-sm text-muted-foreground">Caption here</p>
       </div>
 
       <form onSubmit={handleSubmit} className="w-full max-w-2xl">
@@ -335,7 +333,7 @@ const Form = () => {
             >
               Cancel
             </Button>
-            <br />
+
             <Button type="submit" disabled={loading}>
               {loading
                 ? "Processing..."
@@ -343,12 +341,11 @@ const Form = () => {
                   ? "Make Payment"
                   : "Submit Registration"}
             </Button>
-
-            <Field>
-              <FieldDescription>
-                GhIE-UMaT SRID All rights & reserved 2026
-              </FieldDescription>
-            </Field>
+          </Field>
+          <Field>
+            <FieldDescription>
+              GhIE-UMaT SRID All rights & reserved 2026
+            </FieldDescription>
           </Field>
         </FieldGroup>
       </form>
