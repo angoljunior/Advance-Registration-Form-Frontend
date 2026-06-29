@@ -336,7 +336,7 @@ const Form = () => {
             </Button>
           </Field>
 
-          <Field className="mt-4 text-center text-sm text-muted-foreground ">
+          <Field className="mt-4 text-center items-center text-sm text-muted-foreground ">
             <FieldDescription>
               GhIE-UMaT SRID All rights & reserved 2026
             </FieldDescription>
