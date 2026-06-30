@@ -231,7 +231,7 @@ const Form = () => {
           </Field>
           <Field>
             <FieldLabel htmlFor="engineering_discipline">
-              Programme of Study / Engineering Discipline
+              Programme of Study
             </FieldLabel>
 
             <Input
@@ -257,10 +257,6 @@ const Form = () => {
               <option value="Environmental and Safety Engineering" />
               <option value="Geomatic Engineering" />
             </datalist>
-
-            <FieldDescription>
-              You can select from the list or type your own programme of study.
-            </FieldDescription>
           </Field>
           <Field>
             <FieldLabel>GhIE Membership Status</FieldLabel>
