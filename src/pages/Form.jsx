@@ -30,6 +30,7 @@ const Form = () => {
     phone_number: "",
     institution: "",
     engineering_discipline: "",
+    engineering_discipline_other: "",
     ghie_membership_status: "",
     attendance_type: "normal",
   });
@@ -51,6 +52,10 @@ const Form = () => {
     try {
       await axios.post("registrations/", {
         ...formData,
+        engineering_discipline:
+          formData.engineering_discipline === "other"
+            ? formData.engineering_discipline_other
+            : formData.engineering_discipline,
         payment_reference: payment_reference,
       });
 
@@ -64,6 +69,7 @@ const Form = () => {
         phone_number: "",
         institution: "",
         engineering_discipline: "",
+        engineering_discipline_other: "",
         ghie_membership_status: "",
         attendance_type: "normal",
       });
@@ -232,11 +238,15 @@ const Form = () => {
                 setFormData({
                   ...formData,
                   engineering_discipline: value,
+                  engineering_discipline_other:
+                    value === "other"
+                      ? formData.engineering_discipline_other
+                      : "",
                 })
               }
             >
               <SelectTrigger>
-                <SelectValue placeholder="Choose engineering discipline" />
+                <SelectValue placeholder="Choose course or engineering discipline" />
               </SelectTrigger>
               <SelectContent>
                 <SelectGroup>
@@ -247,15 +257,33 @@ const Form = () => {
                     Mechanical Engineering
                   </SelectItem>
                   <SelectItem value="civil">Civil Engineering</SelectItem>
-                  <SelectItem value="civil">Data Science & </SelectItem>
-                  <SelectItem value="civil">Civil Engineering</SelectItem>
+                  <SelectItem value="data_science">Data Science</SelectItem>
                   <SelectItem value="computer">Computer Engineering</SelectItem>
                   <SelectItem value="mining">Mining Engineering</SelectItem>
                   <SelectItem value="chemical">Chemical Engineering</SelectItem>
+                  <SelectItem value="petroleum">
+                    Petroleum Engineering
+                  </SelectItem>
                   <SelectItem value="other">Other</SelectItem>
                 </SelectGroup>
               </SelectContent>
             </Select>
+            {formData.engineering_discipline === "other" && (
+              <div className="mt-4">
+                <FieldLabel htmlFor="engineering_discipline_other">
+                  Specify your course or discipline
+                </FieldLabel>
+                <Input
+                  id="engineering_discipline_other"
+                  name="engineering_discipline_other"
+                  type="text"
+                  placeholder="Type your course or discipline"
+                  value={formData.engineering_discipline_other}
+                  onChange={handleChange}
+                  required
+                />
+              </div>
+            )}
           </Field>
           <Field>
             <FieldLabel>GhIE Membership Status</FieldLabel>
@@ -319,6 +347,7 @@ const Form = () => {
                   phone_number: "",
                   institution: "",
                   engineering_discipline: "",
+                  engineering_discipline_other: "",
                   ghie_membership_status: "",
                   attendance_type: "normal",
                 })
