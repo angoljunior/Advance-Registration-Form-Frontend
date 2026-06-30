@@ -69,7 +69,6 @@ const Form = () => {
         phone_number: "",
         institution: "",
         engineering_discipline: "",
-        engineering_discipline_other: "",
         ghie_membership_status: "",
         attendance_type: "normal",
       });
@@ -231,59 +230,37 @@ const Form = () => {
             />
           </Field>
           <Field>
-            <FieldLabel>Engineering Discipline</FieldLabel>
-            <Select
+            <FieldLabel htmlFor="engineering_discipline">
+              Programme of Study / Engineering Discipline
+            </FieldLabel>
+
+            <Input
+              id="engineering_discipline"
+              name="engineering_discipline"
+              type="text"
+              list="engineering-disciplines"
+              placeholder="Type or choose your programme"
               value={formData.engineering_discipline}
-              onValueChange={(value) =>
-                setFormData({
-                  ...formData,
-                  engineering_discipline: value,
-                  engineering_discipline_other:
-                    value === "other"
-                      ? formData.engineering_discipline_other
-                      : "",
-                })
-              }
-            >
-              <SelectTrigger>
-                <SelectValue placeholder="Choose course or engineering discipline" />
-              </SelectTrigger>
-              <SelectContent>
-                <SelectGroup>
-                  <SelectItem value="electrical">
-                    Electrical Engineering
-                  </SelectItem>
-                  <SelectItem value="mechanical">
-                    Mechanical Engineering
-                  </SelectItem>
-                  <SelectItem value="civil">Civil Engineering</SelectItem>
-                  <SelectItem value="data_science">Data Science</SelectItem>
-                  <SelectItem value="computer">Computer Engineering</SelectItem>
-                  <SelectItem value="mining">Mining Engineering</SelectItem>
-                  <SelectItem value="chemical">Chemical Engineering</SelectItem>
-                  <SelectItem value="petroleum">
-                    Petroleum Engineering
-                  </SelectItem>
-                  <SelectItem value="other">Other</SelectItem>
-                </SelectGroup>
-              </SelectContent>
-            </Select>
-            {formData.engineering_discipline === "other" && (
-              <div className="mt-4">
-                <FieldLabel htmlFor="engineering_discipline_other">
-                  Specify your course or discipline
-                </FieldLabel>
-                <Input
-                  id="engineering_discipline_other"
-                  name="engineering_discipline_other"
-                  type="text"
-                  placeholder="Type your course or discipline"
-                  value={formData.engineering_discipline_other}
-                  onChange={handleChange}
-                  required
-                />
-              </div>
-            )}
+              onChange={handleChange}
+              required
+            />
+
+            <datalist id="engineering-disciplines">
+              <option value="Electrical Engineering" />
+              <option value="Mechanical Engineering" />
+              <option value="Civil Engineering" />
+              <option value="Data Science" />
+              <option value="Computer Engineering" />
+              <option value="Mining Engineering" />
+              <option value="Chemical Engineering" />
+              <option value="Petroleum Engineering" />
+              <option value="Environmental and Safety Engineering" />
+              <option value="Geomatic Engineering" />
+            </datalist>
+
+            <FieldDescription>
+              You can select from the list or type your own programme of study.
+            </FieldDescription>
           </Field>
           <Field>
             <FieldLabel>GhIE Membership Status</FieldLabel>
