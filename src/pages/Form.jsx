@@ -157,12 +157,6 @@ const Form = () => {
               alt="LinkedIn"
               className="h-7 w-7 object-contain"
             />
-
-            <img
-              src={registrationIcon}
-              alt="GhIE Logo"
-              className="mb-4 h-24 w-24 object-contain"
-            />
           </a>
         </div>
 
