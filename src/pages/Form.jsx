@@ -131,16 +131,6 @@ const Form = () => {
     <div className="flex min-h-screen flex-col items-center justify-center px-4 py-10 mx-auto">
       <div className="mb-8 flex flex-col items-center text-center">
         {/* Main Logo */}
-        <img
-          src={registrationIcon}
-          alt="GhIE Logo"
-          className="mb-4 h-24 w-24 object-contain"
-        />
-
-        <h1 className="max-w-2xl text-center text-2xl font-bold">
-          GhIE-UMaT SRID Engineering Summit Registration Form
-        </h1>
-
         {/* Social Icons */}
         <div className="mt-4 flex flex-row items-center justify-center gap-4">
           <a
@@ -167,8 +157,18 @@ const Form = () => {
               alt="LinkedIn"
               className="h-7 w-7 object-contain"
             />
+
+            <img
+              src={registrationIcon}
+              alt="GhIE Logo"
+              className="mb-4 h-24 w-24 object-contain"
+            />
           </a>
         </div>
+
+        <h1 className="max-w-2xl text-center text-2xl font-bold">
+          GhIE-UMaT SRID Engineering Summit Registration Form
+        </h1>
       </div>
       <form onSubmit={handleSubmit} className="w-full max-w-2xl">
         <FieldGroup>
