@@ -3,6 +3,8 @@ import PaystackPop from "@paystack/inline-js";
 import axios from "@/api/axios";
 import { Button } from "@/components/ui/button";
 import registrationIcon from "./registration icon-Photoroom.png";
+import linkdelnIcon from "./linkdeln icon.jfif";
+import WhatsAppIcon from "./WhatsApp_Icon.png";
 import { toast } from "sonner";
 
 import {
@@ -134,6 +136,22 @@ const Form = () => {
           alt="GhIE Logo"
           className="mb-4 h-20 w-20 object-contain"
         />
+
+        <a href="https://chat.whatsapp.com/JJDOxtYmAxzBijoVqbGRB5?s=cl&p=a&mlu=0">
+          <img
+            src={WhatsAppIcon}
+            alt="GhIE Logo"
+            className="mb-4 h-20 w-20 object-contain"
+          />
+        </a>
+
+        <a href="https://www.linkedin.com/in/ghana-institution-of-engineering-ghie-umat-srid-chapter-206439373?utm_source=share_via&utm_content=profile&utm_medium=member_android">
+          <img
+            src={linkdelnIcon}
+            alt="GhIE Logo"
+            className="mb-4 h-20 w-20 object-contain"
+          />
+        </a>
 
         <h1 className="text-2xl font-bold">
           GhIE-UMaT SRID Engineering Summit Registration Form
@@ -337,13 +355,14 @@ const Form = () => {
                   : "Submit Registration"}
             </Button>
           </Field>
-
-          <Field className="mt-4 text-center items-center text-sm text-muted-foreground ">
-            <FieldDescription>
-              GhIE-UMaT SRID All rights & reserved 2026
-            </FieldDescription>
-          </Field>
         </FieldGroup>
+
+        <Field className="mt-4 text-center items-center text-sm text-muted-foreground ">
+          <FieldDescription>
+            GhIE-UMaT SRID All rights & reserved 2026 Venue: UMaT-SRID
+            Quadrangle || Time: 8:00 AM
+          </FieldDescription>
+        </Field>
       </form>
     </div>
   );
