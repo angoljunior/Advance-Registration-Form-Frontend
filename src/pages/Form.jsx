@@ -130,34 +130,46 @@ const Form = () => {
   return (
     <div className="flex min-h-screen flex-col items-center justify-center px-4 py-10 mx-auto">
       <div className="mb-8 flex flex-col items-center text-center">
-        {/* GhIE Logo */}
+        {/* Main Logo */}
         <img
           src={registrationIcon}
           alt="GhIE Logo"
-          className="mb-4 h-20 w-20 object-contain"
+          className="mb-4 h-24 w-24 object-contain"
         />
 
-        <a href="https://chat.whatsapp.com/JJDOxtYmAxzBijoVqbGRB5?s=cl&p=a&mlu=0">
-          <img
-            src={WhatsAppIcon}
-            alt="GhIE Logo"
-            className="mb-4 h-20 w-20 object-contain"
-          />
-        </a>
-
-        <a href="https://www.linkedin.com/in/ghana-institution-of-engineering-ghie-umat-srid-chapter-206439373?utm_source=share_via&utm_content=profile&utm_medium=member_android">
-          <img
-            src={linkdelnIcon}
-            alt="GhIE Logo"
-            className="mb-4 h-20 w-20 object-contain"
-          />
-        </a>
-
-        <h1 className="text-2xl font-bold">
+        <h1 className="max-w-2xl text-center text-2xl font-bold">
           GhIE-UMaT SRID Engineering Summit Registration Form
         </h1>
-      </div>
 
+        {/* Social Icons */}
+        <div className="mt-4 flex flex-row items-center justify-center gap-4">
+          <a
+            href="https://chat.whatsapp.com/JJDOxtYmAxzBijoVqbGRB5?s=cl&p=a&mlu=0"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="flex h-12 w-12 items-center justify-center rounded-full border transition hover:scale-105"
+          >
+            <img
+              src={WhatsAppIcon}
+              alt="WhatsApp"
+              className="h-7 w-7 object-contain"
+            />
+          </a>
+
+          <a
+            href="https://www.linkedin.com/in/ghana-institution-of-engineering-ghie-umat-srid-chapter-206439373?utm_source=share_via&utm_content=profile&utm_medium=member_android"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="flex h-12 w-12 items-center justify-center rounded-full border transition hover:scale-105"
+          >
+            <img
+              src={linkdelnIcon}
+              alt="LinkedIn"
+              className="h-7 w-7 object-contain"
+            />
+          </a>
+        </div>
+      </div>
       <form onSubmit={handleSubmit} className="w-full max-w-2xl">
         <FieldGroup>
           <div className="grid grid-cols-1 gap-4 md:grid-cols-2">
@@ -357,12 +369,15 @@ const Form = () => {
           </Field>
         </FieldGroup>
 
-        <Field className="mt-4 text-center items-center text-sm text-muted-foreground ">
-          <FieldDescription>
-            GhIE-UMaT SRID All rights & reserved 2026 Venue: UMaT-SRID
-            Quadrangle || Time: 8:00 AM
-          </FieldDescription>
-        </Field>
+        <div className="mt-6 flex w-full flex-col items-center justify-center text-center">
+          <p className="max-w-xl text-sm text-muted-foreground">
+            GhIE-UMaT SRID All rights reserved 2026
+          </p>
+
+          <p className="mt-1 max-w-xl text-sm text-muted-foreground">
+            Venue: UMaT-SRID Quadrangle || Time: 8:00 AM
+          </p>
+        </div>
       </form>
     </div>
   );
