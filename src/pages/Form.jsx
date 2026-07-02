@@ -11,7 +11,7 @@ import barbexLogo from "./barbex logo.png";
 import GoldFieldsLogo from "./gold fields logo.png";
 import nguvuLogo from "./nguvu mines.jfif";
 import Llogo from "./leibherr logo.png";
-import ChamberOfMinesLogo from "./chamber of mines logo.jfif";
+import ChamberOfMinesLogo from "./chamber of mines.jfif";
 
 const logos = [
   { src: barbexLogo, alt: "Barbex Logo" },
