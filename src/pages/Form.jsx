@@ -2,10 +2,24 @@ import React, { useState } from "react";
 import PaystackPop from "@paystack/inline-js";
 import axios from "@/api/axios";
 import { Button } from "@/components/ui/button";
-import registrationIcon from "./registration icon-Photoroom.png";
 import linkdelnIcon from "./linkdeln icon.jfif";
 import WhatsAppIcon from "./WhatsApp_Icon.png";
 import { toast } from "sonner";
+import LogoCloud from "@/components/LogoCloud";
+
+import barbexLogo from "./barbex logo.png";
+import GoldFieldsLogo from "./gold fields logo.png";
+import nguvuLogo from "./nguvu mines.png";
+import Llogo from "./leibherr logo.png";
+import ChamberOfMinesLogo from "./chamber of mines logo.png";
+
+const logos = [
+  { src: barbexLogo, alt: "Barbex Logo" },
+  { src: GoldFieldsLogo, alt: "Gold Fields Logo" },
+  { src: nguvuLogo, alt: "Nuvu Mines Logo" },
+  { src: Llogo, alt: "Leibherr Logo" },
+  { src: ChamberOfMinesLogo, alt: "Chamber of Mines Logo" },
+];
 
 import {
   Field,
@@ -132,6 +146,7 @@ const Form = () => {
       <div className="mb-8 flex flex-col items-center text-center">
         {/* Main Logo */}
         {/* Social Icons */}
+        <LogoCloud logos={logos} />
         <div className="mt-4 flex flex-row items-center justify-center gap-4">
           <a
             href="https://chat.whatsapp.com/JJDOxtYmAxzBijoVqbGRB5?s=cl&p=a&mlu=0"
