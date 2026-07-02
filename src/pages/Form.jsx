@@ -6,12 +6,16 @@ import linkdelnIcon from "./linkdeln icon.jfif";
 import WhatsAppIcon from "./WhatsApp_Icon.png";
 import { toast } from "sonner";
 import LogoCloud from "@/components/LogoCloud";
+import Endorsed from "@/components/Endorsed";
 
 import barbexLogo from "./barbex logo.png";
 import GoldFieldsLogo from "./gold fields logo.png";
 import nguvuLogo from "./nguvu mines.jfif";
 import Llogo from "./Leibherr Logo.jpg";
 import ChamberOfMinesLogo from "./chamber of mines.jfif";
+import UMaTLogo from "./umat logo.jfif";
+
+const logo = [{ src: UMaTLogo, alt: "UMaT Logo" }];
 
 const logos = [
   { src: barbexLogo, alt: "Barbex Logo" },
@@ -378,6 +382,7 @@ const Form = () => {
           </Field>
         </FieldGroup>
 
+        <Endorsed logos={logo} />
         <LogoCloud logos={logos} />
 
         <div className="mt-6 flex w-full flex-col items-center justify-center text-center">
