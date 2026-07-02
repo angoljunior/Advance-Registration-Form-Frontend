@@ -5,6 +5,13 @@ import { ProgressiveBlur } from "@/components/ui/progressive-blur";
 export default function LogoCloud({ logos }) {
   return (
     <div className="relative mx-auto max-w-3xl py-6">
+      <div className="mb-4 text-center">
+        <h2 className="text-lg font-semibold">Our Sponsors</h2>
+        <p className="text-sm text-muted-foreground">
+          Proudly supported by our partners
+        </p>
+      </div>
+
       <InfiniteSlider gap={42} reverse speed={60} speedOnHover={20}>
         {logos.map((logo) => (
           <img

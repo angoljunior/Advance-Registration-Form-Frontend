@@ -146,7 +146,7 @@ const Form = () => {
       <div className="mb-8 flex flex-col items-center text-center">
         {/* Main Logo */}
         {/* Social Icons */}
-        <LogoCloud logos={logos} />
+
         <div className="mt-4 flex flex-row items-center justify-center gap-4">
           <a
             href="https://chat.whatsapp.com/JJDOxtYmAxzBijoVqbGRB5?s=cl&p=a&mlu=0"
@@ -377,6 +377,8 @@ const Form = () => {
             </Button>
           </Field>
         </FieldGroup>
+
+        <LogoCloud logos={logos} />
 
         <div className="mt-6 flex w-full flex-col items-center justify-center text-center">
           <p className="max-w-xl text-sm text-muted-foreground">
