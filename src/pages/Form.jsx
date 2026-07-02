@@ -10,7 +10,7 @@ import LogoCloud from "@/components/LogoCloud";
 import barbexLogo from "./barbex logo.png";
 import GoldFieldsLogo from "./gold fields logo.png";
 import nguvuLogo from "./nguvu mines.jfif";
-import Llogo from "./leibherr logo.jpg";
+import Llogo from "./Leibherr Logo.jpg";
 import ChamberOfMinesLogo from "./chamber of mines.jfif";
 
 const logos = [
