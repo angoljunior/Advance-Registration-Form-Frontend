@@ -354,7 +354,6 @@ const Form = () => {
         </FieldGroup>
 
         {/* Social Icons */}
-
         <div className="mt-4 flex flex-row items-center justify-center gap-4">
           <a
             href="https://chat.whatsapp.com/JJDOxtYmAxzBijoVqbGRB5?s=cl&p=a&mlu=0"
@@ -381,6 +380,9 @@ const Form = () => {
               className="h-7 w-7 object-contain"
             />
           </a>
+          <p className="mt-1 max-w-xl text-sm text-muted-foreground">
+            Follow our social media channels for all official summit updates
+          </p>
         </div>
         {/*   <Endorsed logos={logo} />
         <LogoCloud logos={logos} /> */}
@@ -391,7 +393,7 @@ const Form = () => {
           </p>
 
           <p className="mt-1 max-w-xl text-sm text-muted-foreground">
-            Venue: UMaT-SRID Quadrangle || Time: 8:00 AM
+            Venue: UMaT-SRID Quadrangle || Time: 8:00 AM || 25th July, 2026
           </p>
         </div>
       </form>
