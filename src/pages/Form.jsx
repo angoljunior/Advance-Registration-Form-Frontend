@@ -388,11 +388,11 @@ const Form = () => {
         <LogoCloud logos={logos} /> */}
 
         <div className="mt-6 flex w-full flex-col items-center justify-center text-center">
-          <p className="max-w-xl text-[0.2rem] text-muted-foreground">
+          <p className="max-w-xl text-[0.8rem] text-muted-foreground">
             GhIE-UMaT SRID All rights reserved 2026
           </p>
 
-          <p className="mt-1 max-w-xl text-[0.2rem] text-muted-foreground">
+          <p className="mt-1 max-w-xl text-[0.8rem] text-muted-foreground">
             Venue: UMaT-SRID Quadrangle || Time: 8:00 AM || 25th July, 2026
           </p>
         </div>
