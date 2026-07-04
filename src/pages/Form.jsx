@@ -381,7 +381,7 @@ const Form = () => {
             />
           </a>
         </div>
-        <p className="mt-1 max-w-xl text-sm text-muted-foreground text-center justify-center">
+        <p className="mt-1 max-w-xl  text-muted-foreground text-center justify-center">
           Follow our social media channels for all official summit updates
         </p>
         {/*   <Endorsed logos={logo} />
