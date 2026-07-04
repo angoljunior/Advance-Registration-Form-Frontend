@@ -315,7 +315,7 @@ const Form = () => {
             </Select>
             <FieldDescription>
               VVIP registration requires payment of GHS 100.00 <br />
-              Comes with these packages <br />
+              Comes with <br />
               -Summit Branded T-Shirt <br />
               -Certificate of Participation <br />
               -Access to Event
@@ -359,7 +359,7 @@ const Form = () => {
             href="https://chat.whatsapp.com/JJDOxtYmAxzBijoVqbGRB5?s=cl&p=a&mlu=0"
             target="_blank"
             rel="noopener noreferrer"
-            className="flex h-12 w-12 items-center justify-center rounded-full border transition hover:scale-105"
+            className="flex h-20 w-20 items-center justify-center rounded-full border transition hover:scale-105"
           >
             <img
               src={WhatsAppIcon}
@@ -372,7 +372,7 @@ const Form = () => {
             href="https://www.linkedin.com/in/ghana-institution-of-engineering-ghie-umat-srid-chapter-206439373?utm_source=share_via&utm_content=profile&utm_medium=member_android"
             target="_blank"
             rel="noopener noreferrer"
-            className="flex h-12 w-12 items-center justify-center rounded-full border transition hover:scale-105"
+            className="flex h-20 w-20 items-center justify-center rounded-full border transition hover:scale-105"
           >
             <img
               src={linkdelnIcon}
@@ -380,10 +380,10 @@ const Form = () => {
               className="h-7 w-7 object-contain"
             />
           </a>
-          <p className="mt-1 max-w-xl text-sm text-muted-foreground">
-            Follow our social media channels for all official summit updates
-          </p>
         </div>
+        <p className="mt-1 max-w-xl text-sm text-muted-foreground">
+          Follow our social media channels for all official summit updates
+        </p>
         {/*   <Endorsed logos={logo} />
         <LogoCloud logos={logos} /> */}
 
