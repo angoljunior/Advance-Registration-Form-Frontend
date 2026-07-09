@@ -207,15 +207,10 @@ const Form = () => {
                 required
               />
             </Field>
-
-            {/* <FieldDescription>
-              I confirm that the email address provided is correct and will be
-              used for all summit communications and my QR ticket.
-            </FieldDescription> */}
           </div>
           <div className="flex gap-2">
-            <Checkbox id="terms" />
-            <Label htmlFor="terms">
+            <Checkbox id="terms" required />
+            <Label htmlFor="terms" className="text-gray-400">
               I confirm that the email address provided is correct and will be
               used for all summit communications and my QR ticket.
             </Label>
