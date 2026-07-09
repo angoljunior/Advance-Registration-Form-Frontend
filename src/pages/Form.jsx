@@ -207,17 +207,18 @@ const Form = () => {
                 required
               />
             </Field>
-            <div className="flex gap-2">
-              <Checkbox id="terms" />
-              <Label htmlFor="terms">
-                I confirm that the email address provided is correct and will be
-                used for all summit communications and my QR ticket.
-              </Label>
-            </div>
+
             {/* <FieldDescription>
               I confirm that the email address provided is correct and will be
               used for all summit communications and my QR ticket.
             </FieldDescription> */}
+          </div>
+          <div className="flex gap-2">
+            <Checkbox id="terms" />
+            <Label htmlFor="terms">
+              I confirm that the email address provided is correct and will be
+              used for all summit communications and my QR ticket.
+            </Label>
           </div>
           <Field>
             <FieldLabel htmlFor="institution">Institution</FieldLabel>
