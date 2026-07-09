@@ -53,11 +53,7 @@ const Form = () => {
     try {
       await axios.post("registrations/", {
         ...formData,
-        engineering_discipline:
-          formData.engineering_discipline === "other"
-            ? formData.engineering_discipline_other
-            : formData.engineering_discipline,
-        payment_reference: payment_reference,
+        payment_reference,
       });
 
       toast.success("Registration completed successfully.");
@@ -74,14 +70,13 @@ const Form = () => {
         attendance_type: "normal",
       });
     } catch (error) {
-      console.error("FULL ERROR:", error);
-      console.error("BACKEND ERROR:", error.response?.data);
-
       toast.error(
         error.response?.data?.message ||
           error.response?.data?.error ||
-          "Registration failed. Please try again.",
+          "Registration failed.",
       );
+    } finally {
+      setLoading(false);
     }
   };
 
@@ -197,6 +192,23 @@ const Form = () => {
                 onChange={handleChange}
                 required
               />
+              <div className="mt-6 flex items-start gap-3 rounded-lg border bg-muted/30 p-4">
+                <input
+                  type="checkbox"
+                  id="confirmEmail"
+                  required
+                  className="mt-1"
+                />
+
+                <label htmlFor="confirmEmail" className="text-sm leading-6">
+                  I confirm that the email address provided is correct and
+                  accessible. I understand that my registration confirmation, QR
+                  code ticket, and all event communications will be sent to this
+                  email. Providing an incorrect email address may invalidate my
+                  registration and prevent me from checking in on the day of the
+                  summit.
+                </label>
+              </div>
             </Field>
 
             <Field>
