@@ -192,6 +192,21 @@ const Form = () => {
                 onChange={handleChange}
                 required
               />
+            </Field>
+
+            <Field>
+              <FieldLabel htmlFor="phone_number">Phone Number</FieldLabel>
+              <Input
+                id="phone_number"
+                name="phone_number"
+                type="tel"
+                placeholder="+233 24 000 0000"
+                value={formData.phone_number}
+                onChange={handleChange}
+                required
+              />
+            </Field>
+            <FieldDescription>
               <div className="mt-6 flex items-start gap-3 rounded-lg border bg-muted/30 p-4">
                 <input
                   type="checkbox"
@@ -209,20 +224,7 @@ const Form = () => {
                   summit.
                 </label>
               </div>
-            </Field>
-
-            <Field>
-              <FieldLabel htmlFor="phone_number">Phone Number</FieldLabel>
-              <Input
-                id="phone_number"
-                name="phone_number"
-                type="tel"
-                placeholder="+233 24 000 0000"
-                value={formData.phone_number}
-                onChange={handleChange}
-                required
-              />
-            </Field>
+            </FieldDescription>
           </div>
           <Field>
             <FieldLabel htmlFor="institution">Institution</FieldLabel>
