@@ -19,15 +19,22 @@ const CheckInPage = () => {
         try {
           const qrData = JSON.parse(decodedText.replace(/'/g, '"'));
 
-          await api.post("check-in/", {
+          const response = await api.post("check-in/", {
             attendee_id: qrData.attendee_id,
           });
 
-          toast.success("Check-in successful");
+          if (response.data.status === "already_checked_in") {
+            toast.warning(response.data.message);
+          } else {
+            toast.success(response.data.message || "Check-in successful");
+          }
 
           await scanner.clear();
         } catch (error) {
-          toast.error("Invalid QR code or check-in failed");
+          toast.error(
+            error.response?.data?.message ||
+              "Invalid QR code or check-in failed",
+          );
         }
       },
       (error) => {
