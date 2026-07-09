@@ -5,25 +5,6 @@ import { Button } from "@/components/ui/button";
 import linkdelnIcon from "./linkdeln icon.jfif";
 import WhatsAppIcon from "./WhatsApp_Icon.png";
 import { toast } from "sonner";
-import LogoCloud from "@/components/LogoCloud";
-import Endorsed from "@/components/Endorsed";
-
-import barbexLogo from "./barbex logo.png";
-import GoldFieldsLogo from "./gold fields logo.png";
-import nguvuLogo from "./nguvu mines.jfif";
-import Llogo from "./Leibherr Logo.jpg";
-import ChamberOfMinesLogo from "./chamber of mines.jfif";
-import UMaTLogo from "./umat logo.jfif";
-
-const logo = [{ src: UMaTLogo, alt: "UMaT Logo" }];
-
-const logos = [
-  { src: barbexLogo, alt: "Barbex Logo" },
-  { src: GoldFieldsLogo, alt: "Gold Fields Logo" },
-  { src: nguvuLogo, alt: "Nuvu Mines Logo" },
-  { src: Llogo, alt: "Leibherr Logo" },
-  { src: ChamberOfMinesLogo, alt: "Chamber of Mines Logo" },
-];
 
 import {
   Field,
