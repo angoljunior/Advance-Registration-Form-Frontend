@@ -207,7 +207,7 @@ const Form = () => {
               />
             </Field>
             <FieldDescription>
-              <div className="mt-6 flex items-start gap-3 rounded-lg border bg-muted/30 p-4">
+              <div className="mt-6 flex items-start w-full gap-3 rounded-lg border bg-muted/30 p-4">
                 <input
                   type="checkbox"
                   id="confirmEmail"
