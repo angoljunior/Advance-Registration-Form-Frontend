@@ -175,7 +175,6 @@ const Form = () => {
                 <SelectGroup>
                   <SelectItem value="male">Male</SelectItem>
                   <SelectItem value="female">Female</SelectItem>
-                  <SelectItem value="other">Other</SelectItem>
                 </SelectGroup>
               </SelectContent>
             </Select>
@@ -245,6 +244,7 @@ const Form = () => {
             <datalist id="engineering-disciplines">
               <option value="Electrical Engineering" />
               <option value="Mechanical Engineering" />
+              <option value="Geological Engineering" />
               <option value="Civil Engineering" />
               <option value="Data Science" />
               <option value="Computer Engineering" />
