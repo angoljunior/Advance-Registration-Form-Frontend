@@ -256,7 +256,6 @@ const Form = () => {
               placeholder="Type or choose your programme"
               value={formData.engineering_discipline}
               onChange={handleChange}
-              required
             />
 
             <datalist id="engineering-disciplines">
