@@ -5,7 +5,8 @@ import { Button } from "@/components/ui/button";
 import linkdelnIcon from "./linkdeln icon.jfif";
 import WhatsAppIcon from "./WhatsApp_Icon.png";
 import { toast } from "sonner";
-
+import { Checkbox } from "@/components/ui/checkbox";
+import { Label } from "@/components/ui/label";
 import {
   Field,
   FieldDescription,
@@ -206,25 +207,17 @@ const Form = () => {
                 required
               />
             </Field>
-            <FieldDescription>
-              <div className="mt-6 flex items-start w-full gap-3 rounded-lg border bg-muted/30 p-4">
-                <input
-                  type="checkbox"
-                  id="confirmEmail"
-                  required
-                  className="mt-1"
-                />
-
-                <label htmlFor="confirmEmail" className="text-sm leading-6">
-                  I confirm that the email address provided is correct and
-                  accessible. I understand that my registration confirmation, QR
-                  code ticket, and all event communications will be sent to this
-                  email. Providing an incorrect email address may invalidate my
-                  registration and prevent me from checking in on the day of the
-                  summit.
-                </label>
-              </div>
-            </FieldDescription>
+            <div className="flex gap-2">
+              <Checkbox id="terms" />
+              <Label htmlFor="terms">
+                I confirm that the email address provided is correct and will be
+                used for all summit communications and my QR ticket.
+              </Label>
+            </div>
+            {/* <FieldDescription>
+              I confirm that the email address provided is correct and will be
+              used for all summit communications and my QR ticket.
+            </FieldDescription> */}
           </div>
           <Field>
             <FieldLabel htmlFor="institution">Institution</FieldLabel>
