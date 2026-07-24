@@ -155,6 +155,7 @@ const Form = () => {
     setRegisteredAttendee(null);
   };
 
+  const registrationClosed = import.meta.env.VITE_REGISTRATION_CLOSED;
   return (
     <div className="flex flex-col items-center justify-center min-h-screen px-4 py-10 mx-auto">
       <div className="flex flex-col items-center mb-8 text-center">
@@ -164,6 +165,17 @@ const Form = () => {
           GhIE-UMaT SRID Engineering Summit Registration Form
         </h1>
       </div>
+
+      {registrationClosed && (
+        <div className="w-full max-w-2xl p-4 mb-6 text-center border border-red-300 rounded-lg bg-red-50">
+          <h2 className="font-semibold text-red-700">Registration Closed</h2>
+
+          <p className="mt-1 text-sm text-red-600">
+            Registration for the GhIE-UMaT SRID Engineering Summit has
+            officially closed.
+          </p>
+        </div>
+      )}
 
       <form onSubmit={handleSubmit} className="w-full max-w-2xl">
         <FieldGroup>
@@ -418,10 +430,12 @@ const Form = () => {
               Cancel
             </Button>
 
-            <Button type="submit" disabled={loading}>
-              {formData.attendance_type === "vvip"
-                ? "Continue to Payment"
-                : "Submit Registration"}
+            <Button type="submit" disabled={loading || registrationClosed}>
+              {registrationClosed
+                ? "Registration Closed"
+                : formData.attendance_type === "vvip"
+                  ? "Continue to Payment"
+                  : "Submit Registration"}
             </Button>
           </Field>
         </FieldGroup>
